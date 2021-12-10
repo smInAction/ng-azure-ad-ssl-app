@@ -25,27 +25,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Set up Java version
-      - name: Setup Java version
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
-
-      # Run maven build
-      - name: Run a maven build command
-        run: mvn clean install
-
-        # Verify the build
-      - name: list of files in root directory
-        run: ls -a
-
-        # Verify build in target directory
-      - name: list of files in target directory
-        run: ls -a target/
-
       # Connect to Azure Container Registry (ACR)
       - uses: azure/docker-login@v1
         with:
@@ -80,7 +59,7 @@ jobs:
       - uses: azure/k8s-deploy@v1
         with:
           manifests: |
-            k8s_config/user-service-deployment.yaml
+            ms-identity-deployment.yaml
           images: |
             ${{ env.REGISTRY_NAME }}.azurecr.io/images/${{ env.APP_NAME }}:latest
           imagepullsecrets: |
