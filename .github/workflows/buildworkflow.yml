@@ -25,7 +25,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       # Connect to Azure Container Registry (ACR)
       - uses: azure/docker-login@v1
         with:
@@ -35,7 +35,7 @@ jobs:
 
       # Container build and push to a Azure Container Registry (ACR)
       - run: |
-          docker build -f  "Dockerfile" -t ${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:latest --label dockerfile-path=Dockerfile
+          docker build . -t ${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:latest
           docker push ${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:latest
       # Set the target Azure Kubernetes Service (AKS) cluster.
       - uses: azure/aks-set-context@v1
