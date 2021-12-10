@@ -14,7 +14,7 @@ env:
   CLUSTER_RESOURCE_GROUP: sm_resources1
   NAMESPACE: ingress-basic
   APP_NAME: ng-ad-app
-  SECRET: sm_secret
+  SECRET: sm-secret
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
