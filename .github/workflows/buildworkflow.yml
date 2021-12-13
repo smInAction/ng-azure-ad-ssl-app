@@ -10,11 +10,11 @@ on:
 
 env:
   REGISTRY_NAME: smregistry1
-  CLUSTER_NAME: sm_k8s_cluster1
-  CLUSTER_RESOURCE_GROUP: sm_resources1
-  NAMESPACE: ingress-basic
+  CLUSTER_NAME: sm_k8s_cluster2
+  CLUSTER_RESOURCE_GROUP: sm_resources2
+  NAMESPACE: ingress-basic2
   APP_NAME: ng-ad-app
-  SECRET: sm-secret
+  SECRET: sm-secret2
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -64,7 +64,8 @@ jobs:
       - uses: azure/k8s-deploy@v1
         with:
           manifests: |
-            ms-identity-deployment.yaml
+            cluster-issuer.yaml
+            service-deployment.yaml
           images: |
             ${{ env.REGISTRY_NAME }}.azurecr.io/images/${{ env.APP_NAME }}:latest
           imagepullsecrets: |
