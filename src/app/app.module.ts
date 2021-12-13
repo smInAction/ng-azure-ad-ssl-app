@@ -26,7 +26,7 @@ export function MSALInstanceFactory(): IPublicClientApplication {
     auth: {
       clientId: '3099e36d-71e6-4ee5-ac58-f3497dc7cf1c',
       authority: 'https://login.microsoftonline.com/common',
-      redirectUri: 'https://ng-ad-app.eastus.cloudapp.azure.com/'
+      redirectUri: 'https://ng-ad-app2.eastus.cloudapp.azure.com/'
     },
     cache: {
       cacheLocation: BrowserCacheLocation.LocalStorage,
