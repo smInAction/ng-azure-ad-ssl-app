@@ -64,7 +64,6 @@ jobs:
       - uses: azure/k8s-deploy@v1
         with:
           manifests: |
-            cluster-issuer.yaml
             service-deployment.yaml
           images: |
             ${{ env.REGISTRY_NAME }}.azurecr.io/images/${{ env.APP_NAME }}:latest
