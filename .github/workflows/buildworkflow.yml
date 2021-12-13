@@ -45,7 +45,11 @@ jobs:
           resource-group: ${{ env.CLUSTER_RESOURCE_GROUP }}
       # Create namespace if doesn't exist
       - run: |
-          kubectl create namespace ${{ env.NAMESPACE }} --dry-run -o json | kubectl apply -f -
+          namespacePresent=`kubectl get namespace | grep ${{ env.NAMESPACE }} | wc -l`
+          if [ $namespacePresent -eq 0 ]
+          then
+            echo `kubectl create namespace ${{ env.NAMESPACE }}`
+          fi  
       # Create image pull secret for ACR
       - uses: azure/k8s-create-secret@v1
         with:
