@@ -1,5 +1,5 @@
 ---
-page_type: s ample 
+page_type: sample 
 languages:
 - javascript
 - typescript
