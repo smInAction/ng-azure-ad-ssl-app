@@ -12,8 +12,8 @@
         "Id": "spa",
         "Name": "ms-identity-javascript-angular-spa",
         "Kind" :  "SinglePageApplication",
-        "HomePage": "http://localhost:4200/",
-        "ReplyUrls":"http://localhost:4200/",
+        "HomePage": "https://ng-ad-app.eastus.cloudapp.azure.com/",
+        "ReplyUrls":"https://ng-ad-app.eastus.cloudapp.azure.com/",
         "Audience": "AzureADandPersonalMicrosoftAccount",
         "RequiredResourcesAccess": [
           {
