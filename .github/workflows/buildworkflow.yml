@@ -10,7 +10,7 @@ on:
 
 env:
   REGISTRY_NAME: smregistry2
-  CLUSTER_NAME: sm_k8s_cluster
+  CLUSTER_NAME: sm-k8s-cluster2
   CLUSTER_RESOURCE_GROUP: sm_resources
   NAMESPACE: ingress-basic
   APP_NAME: ng-ad-ssl-app-poc
