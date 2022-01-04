@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ng-ad-app
-          image: "smregistry2.azurecr.io/ng-ad-app"
+          image: "smregistry2.azurecr.io/ng-ad-ssl-app-poc"
           ports:
           - containerPort: 80   
 ---
