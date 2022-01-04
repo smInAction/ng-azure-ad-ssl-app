@@ -12,8 +12,8 @@
         "Id": "spa",
         "Name": "ms-identity-javascript-angular-spa",
         "Kind" :  "SinglePageApplication",
-        "HomePage": "https://angular-okta-poc.eastus.cloudapp.azure.com/",
-        "ReplyUrls":"https://angular-okta-poc.eastus.cloudapp.azure.com/",
+        "HomePage": "https://ng-ad-app.eastus.cloudapp.azure.com/",
+        "ReplyUrls":"https://ng-ad-app.eastus.cloudapp.azure.com/",
         "Audience": "AzureADandPersonalMicrosoftAccount",
         "RequiredResourcesAccess": [
           {

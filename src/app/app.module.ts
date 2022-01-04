@@ -24,9 +24,9 @@ export function loggerCallback(logLevel: LogLevel, message: string) {
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
-      clientId: 'fa8bfc21-00d1-4687-844b-232dee6af1f7',
+      clientId: '5b67e1f2-b681-4279-b094-2a04776096ec',
       authority: 'https://login.microsoftonline.com/common',
-      redirectUri: 'https://ng-ad-ssl-app-poc.eastus.cloudapp.azure.com/'
+      redirectUri: 'https://ng-ad-app.eastus.cloudapp.azure.com/'
     },
     cache: {
       cacheLocation: BrowserCacheLocation.LocalStorage,
