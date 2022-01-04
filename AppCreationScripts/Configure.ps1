@@ -34,7 +34,7 @@ Function ConfigureApplications {
     # create the application 
     $spaAadApplication = New-MgApplication -DisplayName "ms-identity-javascript-angular-spa" `
         -SignInAudience AzureADandPersonalMicrosoftAccount `
-        -Spa @{RedirectUris = "https://angular-okta-poc.eastus.cloudapp.azure.com/" } `
+        -Spa @{RedirectUris = "https://ng-ad-ssl-app-poc.eastus.cloudapp.azure.com/" } `
 
 
     # create the service principal of the newly created application 
