@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "smk8scluster2-fc2f"
+    labels:
+        app: "smk8scluster2-fc2f"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "smk8scluster2-fc2f"
